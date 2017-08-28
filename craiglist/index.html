@@ -6,11 +6,12 @@
 
    <link rel="stylesheet" href="style.css">
    <script type="text/javascript" src="script.js"></script>
+
+
 </head>
 
 <body>
 
-</body>
 
 <section id="overlay" onclick="switchOffOverlay()"></section>
 <section class="list">
@@ -55,7 +56,9 @@
 
 </header>
 <div class="image-carousel">
-   <img src="http://www.skynetinfotec.com/images/classified-ads-banner-for-inner-page.jpg">
+   <img class="slider-image" src="classifieds-banner.jpg">
+   <img class="slider-image" src="classifieds-banner2.jpg">
+   <img class="slider-image" src="classifieds-banner3.jpg">
 
 </div>
 <section class="container">
@@ -118,4 +121,28 @@
    © craigslist help safety privacy feedback cl jobs terms about mobile
 </footer>
 </body>
+
+
+<script>
+
+var index = 0;
+slider();
+
+function slider() {
+   var i;
+   var x = document.getElementsByClassName('slider-image');
+   console.log(x);
+   for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+   }
+   index++;
+   console.log(x[index-1]);
+   if (index > x.length) {index = 1}
+   x[index-1].style.display = "block";
+   setTimeout(slider, 3000);
+}
+
+
+</script>
+
 </html>

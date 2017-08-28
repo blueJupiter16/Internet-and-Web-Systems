@@ -1,3 +1,4 @@
+
 function switchOffOverlay(){
    document.getElementById("overlay").style.display = "none";
    document.getElementsByClassName("list")[0].style.display = "none";

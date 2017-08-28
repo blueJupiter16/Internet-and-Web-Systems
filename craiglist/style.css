@@ -134,6 +134,9 @@ li.dropdown {
 /*ImageCarousel*/
 .image-carousel img{
    width: 100%;
+   display: none;
+   height: 400px;
+
 }
 
 /*container*/
