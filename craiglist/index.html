@@ -7,142 +7,110 @@
    <link rel="stylesheet" href="style.css">
    <script type="text/javascript" src="script.js"></script>
 
+   <!-- CSSMap STYLESHEET - CONTINENTS -->
+   <link rel="stylesheet" type="text/css" href="cssmap-continents/cssmap-continents.css" media="screen" />
+   <!-- jQuery -->
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+   <!-- CSSMap SCRIPT -->
+   <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+   <script>
+
+      $(document).ready(function(){
+
+      // CSSMap;
+      $("#map-continents").CSSMap({
+      "size": 960,
+      "cities":true,
+      onClick:function(e){
+               // SAMPLE VARS;
+         var rLink = e.children("A").eq(0).attr("href"),
+          rText = e.children("A").eq(0).text(),
+          rClass = e.attr("class").split(" ")[0];
+
+          // YOUR CUSTOM FUNCTIONS GOES HERE;
+         //alert(rText);
+         window.location.replace("file:///C:/SNU/Sem-7/Internet and Web Systems/Lab/craiglist/home.html#"+rText);
+      }
+
+      });
+      // END OF THE CSSMap;
+
+      });
+
+
+      $("#map-continents").onClick(function(e){
+
+
+
+      });
+      // END OF THE CSSMap;
+
+
+
+
+
+
+   </script>
+
+
 
 </head>
 
 <body>
 
+   <header>
+      <nav class="navbar">
 
-<section id="overlay" onclick="switchOffOverlay()"></section>
-<section class="list">
-   <ul>
-      <li><a href="">antiques</a></li>
-      <li><a href="">for sale</a></li>
-      <li><a href="">businesses</a></li>
-      <li><a href="">trucks</a></li>
-      <li><a href="">cars</a></li>
-      <li><a href="">computers</a></li>
-      <li><a href="">cell phones</a></li>
-      <li><a href="">sporting</a></li>
-      <li><a href="">tools</a></li>
-      <li><a href="">jewelery</a></li>
-   </ul>
-</section>
+         <ul>
+           <li><a  href="#home"><img id="logo" src="https://cdn.worldvectorlogo.com/logos/craigslist.svg"></a></li>
+           <li class="dropdown">
+             <a href="javascript:void(0)" class="dropbtn">Select Region<img id="dropdownicon" src="https://cedcn.org/wp-content/themes/cedcn/images/icon-arrow_dropdown.svg"></a>
+             <div class="dropdown-content">
+
+             </div>
+           </li>
+           <li class="searchbar" style="float:right;">
+              <input></input>
+
+              <img id="searchicon" src="search.png">
+           </li>
+
+         </ul>
+
+         </div>
+      </nav>
+
+   </header>
 
 
-<header>
-   <nav class="navbar">
 
-      <ul>
-        <li><a  href="#home"><img id="logo" src="https://cdn.worldvectorlogo.com/logos/craigslist.svg"></a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Delhi <img id="dropdownicon" src="https://cedcn.org/wp-content/themes/cedcn/images/icon-arrow_dropdown.svg"></a>
-          <div class="dropdown-content">
-            <a href="#">Chennai</a>
-            <a href="#">Mumbai</a>
-            <a href="#">Kolkata</a>
-          </div>
-        </li>
-        <li class="searchbar" style="float:right;">
-           <input></input>
-
-           <img id="searchicon" src="search.png">
-        </li>
-
-      </ul>
-
-      </div>
-   </nav>
-
-</header>
-<div class="image-carousel">
-   <img class="slider-image" src="classifieds-banner.jpg">
-   <img class="slider-image" src="classifieds-banner2.jpg">
-   <img class="slider-image" src="classifieds-banner3.jpg">
-
+   <!-- CSSMap - Continents -->
+<div id="map-continents">
+ <ul class="continents">
+  <li class="c1" id="africa"><a href="#africa"  onclick="continentClick(this.id)">Africa</a></li>
+  <li class="c2" id="africa"><a href="#asia" onclick="continentClick(this.id)">Asia</a></li>
+  <li class="c3" id="africa"><a href="#australia" onclick="continentClick(this.id)">Australia</a></li>
+  <li class="c4" id="africa"><a href="#europe" onclick="continentClick(this.id)">Europe</a></li>
+  <li class="c5" id="africa"><a href="#north-america" onclick="continentClick(this.id)">North America</a></li>
+  <li class="c6" id="africa"><a href="#south-america" onclick="continentClick(this.id)">South America</a></li>
+ </ul>
 </div>
-<section class="container">
-
-      <h1>Browse Categories</h1>
-      <hr id="style_dash">
-      <br>
-
-      <div class="categorycontainer">
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="community.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-             <h1 style="text-align:center;"><b>Community</b></h1>
-
-          </div>
-
-         </div>
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="housing.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-           <h1 style="text-align:center;"><b>Housing</b></h1>
-           </div>
-         </div>
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="Jobs.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-           <h1 style="text-align:center;"><b>Jobs</b></h1>
-           </div>
-         </div>
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="personals.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-           <h1 style="text-align:center;"><b>Personals</b></h1>
-           </div>
-         </div>
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="forsale.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-           <h1 style="text-align:center;"><b>For Sale</b></h1>
-           </div>
-         </div>
-
-         <div class="card" onclick="switchOnOverlay()">
-           <img src="services.jpg" alt="Avatar" style="width:100%">
-           <div class="cardcontainer">
-           <h1 style="text-align:center;"><b>Services</b></h1>
-           </div>
-         </div>
-
-      </div>
-
-</section>
-
-<footer>
-   © craigslist help safety privacy feedback cl jobs terms about mobile
-</footer>
-</body>
+<!-- END OF THE CSSMap - Continents -->
 
 
-<script>
-
-var index = 0;
-slider();
-
-function slider() {
-   var i;
-   var x = document.getElementsByClassName('slider-image');
-   console.log(x);
-   for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+<script type="text/javascript">
+   function continentClick(s){
+      alert(s);
+      console.log(s);
    }
-   index++;
-   console.log(x[index-1]);
-   if (index > x.length) {index = 1}
-   x[index-1].style.display = "block";
-   setTimeout(slider, 3000);
-}
-
 
 </script>
 
-</html>
+
+
+   <footer>
+      © craigslist help safety privacy feedback cl jobs terms about mobile
+   </footer>
+   </body>
+   </html>
