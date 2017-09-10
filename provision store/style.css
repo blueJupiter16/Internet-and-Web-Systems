@@ -1,0 +1,30 @@
+.navbar{
+   margin-bottom:0;
+}
+
+.card-block h2{
+   text-align: left;
+}
+
+#myCarousel{
+
+}
+.featurette{
+   padding-top:100px;
+
+}
+
+.featurette-content{
+      padding-top: 30px;
+}
+
+.featurette-content h2{
+   font-size:50px;
+}
+.display-6{
+   text-align: center;
+}
+
+.card-group img{
+   width: -webkit-fill-available;
+}
