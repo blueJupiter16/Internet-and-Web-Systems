@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Provision Store</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script>
+      $(document).ready(function(){
+         $('.popoverData').popover();
+         $('.popoverOption').popover({ trigger: "hover" });
+
+         //getting items clicked
+
+      });
+
+   </script>
+
+   <script>
+      var string = "";
+
+      function productClick(name,price){
+         string += name + ":" + price + ",";
+         console.log(string);
+      }
+
+      function goToCheckout(){
+
+         var url = "file:///C:/SNU/Sem-7/Internet%20and%20Web%20Systems/Lab/provision%20store/checkout.html#";
+         url+=string;
+         window.location.replace(url);
+      }
+   </script>
+
+ </head>
+
+<body>
+
+   <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ProvisionStore</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dairy.html">Dairy</a></li>
+                <li><a href="meat.html">Meat</a></li>
+                <li><a href="beverages.html">Beverages</a></li>
+                <li><a href="produce.html">Produce</a></li>
+                <li><a href="frozenitems.html">Frozen Items</a></li>
+                <li><a href="petcare.html">Pet Care</a></li>
+
+
+              </ul>
+            </li>
+          </ul>
+          <div class="col-sm-3 col-md-3">
+              <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+              </form>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="goToCheckout()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+   </header>
+   <div class="container">
+
+      <div class="page-header">
+         <h1>Dairy Products <small></small></h1>
+      </div>
+
+      <div class="row">
+         <div class="card-group col-md-12 col-sm-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://static1.shopfilo.com/5254-medium_default_2x/mother-dairy-paneer.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Mother Dairy Paneer</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">With smooth, soft and uniform texture, Mother Dairy Paneer is rich in protein and fat contents. An important part of Indian diet, fresh and soft paneer can be grilled, barbequed or cooked with gravies for preparing delectable Indian cuisines.</p>
+               <a onclick="productClick('Mother Dairy Paneer','63')" class="btn btn-primary popoverOption" href="#" data-content="Rs 63" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+               <img class="card-img-top img-responsive" src="http://72east.co/wp-content/uploads/2016/08/img_0144-1080x725.jpeg" style="height: 180px; width: 350px; " alt="Card image cap">             <div class="card-block">
+               <h4 class="card-title"><b>Mother Dairy Curd</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Enriched with nutrients, Mother Dairy Dahi (Polypack) makes for a healthy and tasty addition to everyday meals. It tastes best when served chilled and can be relished anytime of the day.</p>
+               <a onclick="productClick('Mother Dairy Curd','28')" class="btn btn-primary popoverOption" href="#" data-content="Rs 28" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_206534.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Amul Kesar Flavoured Milk</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Amul Kool Kesar Flavoured Milk (Bottle) is refreshing Saffron (Kesar) based drink. A great summer refresher, it can be consumed any time of the day.</p>
+               <a onclick="productClick('Amul Kesar Flavoured Milk','20')" class="btn btn-primary popoverOption" href="#" data-content="Rs 20" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="card-group col-md-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="http://i.ndtvimg.com/i/2015-06/danone_625x400_41433147744.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Danone Toned Milk(Tetra Pak)</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Healthy and delicious, Danone Toned Milk (Tetra Pak) is packed with the goodness of essential nutrients. It is popularly used in the preparation of sweets, curd, tea, coffee etc. or can even be consumed directly.</p>
+               <a onclick="productClick('Danone Toned Milk(Tatra Pak)','72')" class="btn btn-primary popoverOption" href="#" data-content="Rs 72" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="http://daalsubzi.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/o/motherdairy_tadkachach.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Mother Dairy Tadka Bottle Buttermilk</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Made from spices like ginger, green chilli and Jeera, Mother Dairy Tadka Buttermilk is both delicious and refreshing. Made from the best quality milk, it makes for a healthy addition to everyday meals and tastes best when served chilled.</p>
+               <a onclick="productClick('Mother Dairy Tadka Bottle Buttermilk','10')" class="btn btn-primary popoverOption" href="#" data-content="Rs 10" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://n3.sdlcdn.com/imgs/b/5/w/NescafeHazelnut_Side1_1_-3293c.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Nescafe Hazelnut Cold Coffee</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Ready to drink coffee, Nutty and delicious flavoursome treat, Offers a delightful taste in every sip, Can be relished anytime of the day</p>
+               <a onclick="productClick('Nescafe Hazelnut Cold Coffee','30')" class="btn btn-primary popoverOption" href="#" data-content="Rs 30" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+</div>
+
+
+
+   <div class="container">
+      <footer>
+            <hr />
+           <p class="pull-right"><a href="#">Back to top</a></p>
+           <p>© 2017 ProvisionStore, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+
+   </div>
+
+</body>

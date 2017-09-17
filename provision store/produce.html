@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Provision Store</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script>
+      $(document).ready(function(){
+         $('.popoverData').popover();
+         $('.popoverOption').popover({ trigger: "hover" });
+
+         //getting items clicked
+
+      });
+
+   </script>
+
+   <script>
+      var string = "";
+
+      function productClick(name,price){
+         string += name + ":" + price + ",";
+         console.log(string);
+      }
+
+      function goToCheckout(){
+
+         var url = "file:///C:/SNU/Sem-7/Internet%20and%20Web%20Systems/Lab/provision%20store/checkout.html#";
+         url+=string;
+         window.location.replace(url);
+      }
+   </script>
+
+ </head>
+
+<body>
+
+   <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ProvisionStore</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dairy.html">Dairy</a></li>
+                <li><a href="meat.html">Meat</a></li>
+                <li><a href="beverages.html">Beverages</a></li>
+                <li><a href="produce.html">Produce</a></li>
+                <li><a href="frozenitems.html">Frozen Items</a></li>
+                <li><a href="petcare.html">Pet Care</a></li>
+
+
+              </ul>
+            </li>
+          </ul>
+          <div class="col-sm-3 col-md-3">
+              <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+              </form>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="goToCheckout()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+   </header>
+   <div class="container">
+
+      <div class="page-header">
+         <h1>Dairy Products <small></small></h1>
+      </div>
+
+      <div class="row">
+         <div class="card-group col-md-12 col-sm-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_373742.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Robusta Banana-Papaya-Pomegranate Combo</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Robusta Banana - 6 units<br />Papaya - 1 unit (900-1400 gm)<br />Pomegranate (Anaar) - 6 units (1.1-1.4 kg)</p>
+               <a onclick="productClick('Robusta Banana-Papaya-Pomegranate Combo','149')" class="btn btn-primary popoverOption" href="#" data-content="Rs 149" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+               <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_115944.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Asparagus</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Fresh, green Asparagus is a well-loved vegetable, delectably known for its crisp and sweet taste. it can be steamed, simmered, roasted, battered, grilled, sautéed or wok-fried. Asparagus can also be consumed raw as a salad.</p>
+               <a onclick="productClick('Asparagus','89')" class="btn btn-primary popoverOption" href="#" data-content="Rs 89" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_370234.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Ta-daa! Boiled Sweet Corn Kernels - Lemon and Pepper</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Image shown is a representation and may slightly vary from the actual product. Every effort is made to maintain accuracy of all information displayed</p>
+               <a onclick="productClick('Ta-daa! Boiled Sweet Corn Kernels - Lemon and Pepper','45')" class="btn btn-primary popoverOption" href="#" data-content="Rs 45" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="card-group col-md-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_320866.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Bell Peppers Basket</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Add oodles of taste and nutrition to your daily diet with this Bell Peppers Basket. An exquisite pack of Red, Yellow and Green Capsicums ideal to make delicious salads and juices, and can also be mixed with your favourite veggies and spices to prepare a wholesome meal.</p>
+               <a onclick="productClick('Bell Peppers Basket','299')" class="btn btn-primary popoverOption" href="#" data-content="Rs 299" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_342341.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Red Globe Grapes - Imported</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">A juicy berry fruit, red in colour with a sweet and sugary taste, Red Globe Grapes are also known as Australian Grapes. A delight for elites, these grapes are perfect to savour as table fruits for their great taste. Preserved Red Grapes are popularly used in manufacturing of wines.</p>
+               <a onclick="productClick('Red Globe Grapes - Imported','250')" class="btn btn-primary popoverOption" href="#" data-content="Rs 250" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_69048.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Rambutan - Imported</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Image shown is a representation and may slightly vary from the actual product. Every effort is made to maintain accuracy of all information displayed.</p>
+               <a onclick="productClick('Rambutan - Imported','348')" class="btn btn-primary popoverOption" href="#" data-content="Rs 348" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+</div>
+
+
+
+   <div class="container">
+      <footer>
+            <hr />
+           <p class="pull-right"><a href="#">Back to top</a></p>
+           <p>© 2017 ProvisionStore, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+
+   </div>
+
+</body>

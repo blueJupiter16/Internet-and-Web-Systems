@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Provision Store</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script>
+      $(document).ready(function(){
+         $('.popoverData').popover();
+         $('.popoverOption').popover({ trigger: "hover" });
+
+         //getting items clicked
+
+      });
+
+   </script>
+
+   <script>
+      var string = "";
+
+      function productClick(name,price){
+         string += name + ":" + price + ",";
+         console.log(string);
+      }
+
+      function goToCheckout(){
+
+         var url = "file:///C:/SNU/Sem-7/Internet%20and%20Web%20Systems/Lab/provision%20store/checkout.html#";
+         url+=string;
+         window.location.replace(url);
+      }
+   </script>
+
+ </head>
+
+<body>
+
+   <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ProvisionStore</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dairy.html">Dairy</a></li>
+                <li><a href="meat.html">Meat</a></li>
+                <li><a href="beverages.html">Beverages</a></li>
+                <li><a href="produce.html">Produce</a></li>
+                <li><a href="frozenitems.html">Frozen Items</a></li>
+                <li><a href="petcare.html">Pet Care</a></li>
+
+
+              </ul>
+            </li>
+          </ul>
+          <div class="col-sm-3 col-md-3">
+              <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+              </form>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="goToCheckout()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+   </header>
+   <div class="container">
+
+      <div class="page-header">
+         <h1>Meat Products<small></small></h1>
+      </div>
+
+      <div class="row">
+         <div class="card-group col-md-12 col-sm-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_363919.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Curry Cut Chicken</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Fine Cut 1KG Chicken </p>
+               <a onclick="productClick('Curry Cut Chicken','260')" class="btn btn-primary popoverOption" href="#" data-content="Rs 260" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+               <img class="card-img-top img-responsive" src="http://www.goodmeat.in/wp-content/uploads/2016/09/Chicken-Salami-Roll-1kg-1.jpg" style="height: 180px; width: 350px; " alt="Card image cap">             <div class="card-block">
+               <h4 class="card-title"><b>Spicy Salami</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Fresh Salami Chicken with added Spices</p>
+               <a onclick="productClick('Spicy Salami','385')" class="btn btn-primary popoverOption" href="#" data-content="Rs 385" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_373592.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Sole (Fillet) Fish</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Fine Cut fillet fish 500 grams</p>
+               <a onclick="productClick('Sole (Fillet) Fish','722')" class="btn btn-primary popoverOption" href="#" data-content="Rs 722" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="card-group col-md-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_197177.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Shaan Chicken Masala</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">An exotic blend of assertive spices<br />Perfect for making deliciously aromatic chicken curry<br />Imparts a mouth-watering flavour when added to gravies<br />A flavourful ingredient to elevate the taste of chicken dishes</p>
+               <a onclick="productClick('Shaan Chicken Masala','55')" class="btn btn-primary popoverOption" href="#" data-content="Rs 55" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_359363.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Ocean Secret Tuna Salad</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Sumptuous combination of tuna with olives, sweet corn, carrot and green peas<br /> Deliciously rich, healthy and appetizing in flavour<br /> Natural source of omega 3<br />Perfect and handy meal for breakfast, lunch or dinner</p>
+               <a onclick="productClick('Ocean Secret Tuna Salad','140')" class="btn btn-primary popoverOption" href="#" data-content="Rs 140" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_363964.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Best Value mutton Kheema</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Fine chopped mutton mints</p>
+               <a onclick="productClick('Best Value mutton Kheema','238')" class="btn btn-primary popoverOption" href="#" data-content="Rs 238" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+</div>
+
+
+
+   <div class="container">
+      <footer>
+            <hr />
+           <p class="pull-right"><a href="#">Back to top</a></p>
+           <p>© 2017 ProvisionStore, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+
+   </div>
+
+</body>

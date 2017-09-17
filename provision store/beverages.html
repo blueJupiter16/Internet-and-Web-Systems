@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Provision Store</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script>
+      $(document).ready(function(){
+         $('.popoverData').popover();
+         $('.popoverOption').popover({ trigger: "hover" });
+
+         //getting items clicked
+
+      });
+
+   </script>
+
+   <script>
+      var string = "";
+
+      function productClick(name,price){
+         string += name + ":" + price + ",";
+         console.log(string);
+      }
+
+      function goToCheckout(){
+
+         var url = "file:///C:/SNU/Sem-7/Internet%20and%20Web%20Systems/Lab/provision%20store/checkout.html#";
+         url+=string;
+         window.location.replace(url);
+      }
+   </script>
+
+ </head>
+
+<body>
+
+   <header>
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ProvisionStore</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="dairy.html">Dairy</a></li>
+                <li><a href="meat.html">Meat</a></li>
+                <li><a href="beverages.html">Beverages</a></li>
+                <li><a href="produce.html">Produce</a></li>
+                <li><a href="frozenitems.html">Frozen Items</a></li>
+                <li><a href="petcare.html">Pet Care</a></li>
+
+
+              </ul>
+            </li>
+          </ul>
+          <div class="col-sm-3 col-md-3">
+              <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" name="q">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+              </form>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" onclick="goToCheckout()"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+   </header>
+   <div class="container">
+
+      <div class="page-header">
+         <h1>Beverages<small></small></h1>
+      </div>
+
+      <div class="row">
+         <div class="card-group col-md-12 col-sm-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_364797.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Pepsi My Soft Drink (Can) - Pack of 6</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Refreshing, carbonated soft drink<br />Ultimate cola experience<br />Irresistible, fresh and crisp in taste<br />Perfectly complements every snack or meal</p>
+               <a onclick="productClick('Pepsi My Soft Drink (Can) - Pack of 6','99')" class="btn btn-primary popoverOption" href="#" data-content="Rs 99" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+               <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_215475.jpg" style="height: 180px; width: 350px; " alt="Card image cap">             <div class="card-block">
+               <h4 class="card-title"><b>Tropicana Mixed Fruit Delight Juice - Pack of 2</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">A sweet tasting ready to serve fruit beverage, Tropicana Mixed Fruit Delight Juice is made from scrumptiously rich, juicy fruits. Irresistibly delicious, it is a great summer refresher and comes in a special 6 layer pack to retain the goodness of taste.</p>
+               <a onclick="productClick('Tropicana Mixed Fruit Delight Juice - Pack of 2','168')" class="btn btn-primary popoverOption" href="#" data-content="Rs 168" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_244.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Nescafe Classic Coffee (Pouch)</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">The original blend of 100% pure coffee, Nescafe Classic Coffee is made from the finest coffee beans. Its distinctly rich flavour acts as the perfect fuel to kick start the day on an energetic note.</p>
+               <a onclick="productClick('Nescafe Classic Coffee (Pouch)','404')" class="btn btn-primary popoverOption" href="#" data-content="Rs 404" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="card-group col-md-12">
+
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_18648.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Horlicks Chocolate, Health and Nutrition Drink (Refill)</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">Health Drink that has nutrients to support immunity.Horlicks is Clinically proven to improve 5 signs of growth. Clinically proven to make kids Taller, Stronger & Sharper. Scientifically proven to improve Power of Milk</p>
+               <a onclick="productClick('Horlicks Chocolate, Health and Nutrition Drink (Refill)','199')" class="btn btn-primary popoverOption" href="#" data-content="Rs 199" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_43921.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Real Activ 100% Tender Coconut Water</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">100% Tender Coconut Water is naturally low in calories and fat free.Real Activ Coconut Water packs natural nutrients.</p>
+               <a onclick="productClick('Real Activ 100% Tender Coconut Water','38')" class="btn btn-primary popoverOption" href="#" data-content="Rs 38" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+           <div class="card">
+             <img class="card-img-top img-responsive" src="https://cdn.grofers.com/app/images/products/full_screen/pro_341881.jpg" style="height: 180px; width: 350px; " alt="Card image cap">
+             <div class="card-block">
+               <h4 class="card-title"><b>Healthkart Mango Slim Shake Health Drink</b></h4>
+               <p class="card-text"><small class="text-muted">Description</small></p>
+               <p class="card-text">A nutritious and low calorie meal<br />Deliciously rich mango flavoured shake<br />Fortified with 27 vitamins and minerals<br />An ideal meal replacement shake to manage weight</p>
+               <a onclick="productClick('Healthkart Mango Slim Shake Health Drink','978')" class="btn btn-primary popoverOption" href="#" data-content="Rs 978" rel="popover" data-placement="top" data-original-title="Price">Buy Now</a>
+
+             </div>
+           </div>
+
+         </div>
+      </div>
+
+
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+</div>
+
+
+
+   <div class="container">
+      <footer>
+            <hr />
+           <p class="pull-right"><a href="#">Back to top</a></p>
+           <p>© 2017 ProvisionStore, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
+
+   </div>
+
+</body>
