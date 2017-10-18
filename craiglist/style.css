@@ -186,3 +186,8 @@ footer{
    text-align: center;
    height: 40px;
 }
+
+#results_container{
+   margin-left: 150px;
+   margin-right: 150px;
+}
