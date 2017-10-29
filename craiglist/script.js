@@ -20,5 +20,5 @@ function parseURL(){
 }
 
 function mapPage(){
-   window.location.replace("file:///C:/SNU/Sem-7/Internet and Web Systems/Lab/craiglist/index.html");
+   window.location.replace("file:///C:/SNU/Sem-7/Internet and Web Systems/Lab/craiglist/index.php");
 }
