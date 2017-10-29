@@ -4,6 +4,7 @@
   <title>Provision Store</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="script.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -141,39 +142,98 @@
 
 
       <hr />
-      <h1 class="display-6">Categories</h1>
+      <div>
+         <h1 class="display-6">Categories</h1>
+         <a onclick="addCategories()" class="btn btn-primary">Add Categories</a>
+
+      </div>
       <hr/>
-      <div class="row category-grid">
+      <div id="categories">
+         <!--<div class="row category-grid">
 
-         <div class="col-md-12">
+            <div class="col-md-12">
 
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="https://3.imimg.com/data3/SB/LI/MY-13453254/amul-dairy-products-500x500.jpg" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Dairy</h3>
-                   <a href="dairy.html" class="btn btn-primary">View Products</a>
-                 </div>
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="https://3.imimg.com/data3/SB/LI/MY-13453254/amul-dairy-products-500x500.jpg" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Dairy</h3>
+                      <a href="dairy.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
                </div>
+
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="https://us.123rf.com/450wm/monticello/monticello1504/monticello150400089/38686988-assorted-meat-products-including-ham-and-sausages.jpg?ver=6" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Meat</h3>
+                      <a href="meat.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="https://www.orangemart.in/wp-content/uploads/2015/11/soft-drinks.jpg" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Beverages</h3>
+                      <a href="beverages.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
+               </div>
+
             </div>
 
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="https://us.123rf.com/450wm/monticello/monticello1504/monticello150400089/38686988-assorted-meat-products-including-ham-and-sausages.jpg?ver=6" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Meat</h3>
-                   <a href="meat.html" class="btn btn-primary">View Products</a>
-                 </div>
+         </div>
+
+         <div class="row category-grid">
+
+            <div class="col-md-12">
+
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="https://static1.squarespace.com/static/54b92e6ae4b076c29fb9c591/t/54bb0e1ae4b071c8f283a766/1421544992152/produce.jpg?format=1500w" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Produce</h3>
+                      <a href="produce.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
                </div>
+
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="http://www.seriouseats.com/assets_c/2014/01/20140122-taste-test-nuggets-overhead-primary-thumb-625xauto-378719.jpg" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Frozen Items</h3>
+                      <a href="frozenitems.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="http://www.dogsnaturallymagazine.com/wp-content/uploads/2014/09/pet-food-packaging-dangers.jpg" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Pet Care</h3>
+                      <a href="petcare.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
+               </div>
+
             </div>
 
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="https://www.orangemart.in/wp-content/uploads/2015/11/soft-drinks.jpg" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Beverages</h3>
-                   <a href="beverages.html" class="btn btn-primary">View Products</a>
-                 </div>
+         </div>
+         <div class="row category-grid">
+            <div class="col-md-12">
+               <div class="col-md-4 col-sm-6">
+                  <div class="card" style="width:fit-content;">
+                    <img class="card-img-top img-responsive" src="http://www.dogsnaturallymagazine.com/wp-content/uploads/2014/09/pet-food-packaging-dangers.jpg" alt="Card image cap">
+                    <div class="card-block">
+                      <h3 class="card-title">Pet Care</h3>
+                      <a href="petcare.html" class="btn btn-primary">View Products</a>
+                    </div>
+                  </div>
                </div>
             </div>
 
@@ -181,53 +241,38 @@
 
       </div>
 
-      <div class="row category-grid">
-
-         <div class="col-md-12">
-
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="https://static1.squarespace.com/static/54b92e6ae4b076c29fb9c591/t/54bb0e1ae4b071c8f283a766/1421544992152/produce.jpg?format=1500w" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Produce</h3>
-                   <a href="produce.html" class="btn btn-primary">View Products</a>
-                 </div>
-               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="http://www.seriouseats.com/assets_c/2014/01/20140122-taste-test-nuggets-overhead-primary-thumb-625xauto-378719.jpg" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Frozen Items</h3>
-                   <a href="frozenitems.html" class="btn btn-primary">View Products</a>
-                 </div>
-               </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6">
-               <div class="card" style="width:fit-content;">
-                 <img class="card-img-top img-responsive" src="http://www.dogsnaturallymagazine.com/wp-content/uploads/2014/09/pet-food-packaging-dangers.jpg" alt="Card image cap">
-                 <div class="card-block">
-                   <h3 class="card-title">Pet Care</h3>
-                   <a href="petcare.html" class="btn btn-primary">View Products</a>
-                 </div>
-               </div>
-            </div>
-
-         </div>
-
-      </div>
-
-
+   -->
    </div>
    <div class="container">
-      <footer>
-            <hr />
-           <p class="pull-right"><a href="#">Back to top</a></p>
-           <p>© 2017 ProvisionStore, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-      </footer>
+      
 
    </div>
+
+   <script>
+
+         var cat = document.getElementById("categories");
+         var data = [
+            ["https://3.imimg.com/data3/SB/LI/MY-13453254/amul-dairy-products-500x500.jpg","Dairy"],
+            ["https://us.123rf.com/450wm/monticello/monticello1504/monticello150400089/38686988-assorted-meat-products-including-ham-and-sausages.jpg?ver=6","meat"],
+            ["https://www.orangemart.in/wp-content/uploads/2015/11/soft-drinks.jpg","Beverages"],
+            ["https://static1.squarespace.com/static/54b92e6ae4b076c29fb9c591/t/54bb0e1ae4b071c8f283a766/1421544992152/produce.jpg?format=1500w","Produce"],
+            ["http://www.seriouseats.com/assets_c/2014/01/20140122-taste-test-nuggets-overhead-primary-thumb-625xauto-378719.jpg","Frozen Items"],
+            ["http://www.dogsnaturallymagazine.com/wp-content/uploads/2014/09/pet-food-packaging-dangers.jpg","Pet Care"]
+         ];
+
+
+
+         data.map(function(elm,index){
+            console.log(index);
+            if(index % 3 == 0){
+              cat.innerHTML += "<div class=\"row category-grid\">             <div class=\"col-md-12\">";
+            }
+            cat.innerHTML += "<div class=\" col-md-4 col-sm-6 \">        <div class=\"card\" style=\"width:fit-content;\">           <img class=\"card-img-top img-responsive\" src=\" "+ data[index][0] +" \" alt=\"Card image cap\">           <div class=\"card-block\">             <h3 class=\"card-title\">" + data[index][1] + "</h3>             <a href=\"beverages.html\" class=\"btn btn-primary\">View Products</a>           </div>         </div>      </div>";
+            if(index % 3 == 2){
+              cat.innerHTML += "</div></div>";
+            }
+
+         });
+   </script>
 
 </body>
